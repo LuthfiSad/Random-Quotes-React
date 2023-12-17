@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Nunito', sans-serif;
+  transition: .5s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#quote-box {
+  background: #fff;
+  width: 40rem;
+  padding: 3rem;
+  border-radius: 15px;
+  margin: 1rem;
+}
+
+#text {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+#author {
+  display: flex;
+  justify-content: end;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+#buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: .5rem;
+}
+
+.social-media {
+  display: flex;
+  gap: .5rem;
+}
+
+.social-media > a {
+  text-decoration: none;
+  width: 2rem;
+  padding: .5rem;
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: .5s;
 }
 
-.App-link {
-  color: #61dafb;
+/* .social-media > a:hover, #new-quote:hover {
+  background-color: #000;
+  color: #fff;
+} */
+
+#new-quote {
+  border: none;
+  padding: .5rem 1rem;
+  font-size: .9rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: .5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width: 425px) {
+  .social-media {
+  order: 1;
+}
+#quote-box {
+  padding: 2rem;
+}
+#buttons {
+  justify-content: center;
+  flex-direction: column;
+}
+:root{
+  font-size: 80%;
+}
+#new-quote {
+  width: 100%;
+}
 }
